@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHiram OBS Chart</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons for modern UI -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        /* Connector lines for organizational tree */
+        .tree-line-vertical {
+            width: 2px;
+            background-color: #cbd5e1;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .tree-line-horizontal {
+            height: 2px;
+            background-color: #cbd5e1;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-30 px-6 py-4 shadow-sm">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase">IT124P Project Management</span>
+                    <span class="text-slate-400 text-xs">|</span>
+                    <span class="text-slate-500 text-xs font-semibold">College of Computer and Information Science</span>
+                </div>
+                <h1 class="text-2xl font-extrabold text-slate-900 mt-1 flex items-center gap-2">
+                    <i data-lucide="git-branch" class="text-pink-600"></i> PHiram Organizational Breakdown Structure (OBS)
+                </h1>
+                <p class="text-slate-500 text-sm mt-0.5">Project team structural chart mapping creative, technical, and management roles.</p>
+            </div>
+            <div class="flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600">
+                <i data-lucide="lock" class="w-3.5 h-3.5 text-slate-500"></i> Static Presentation Mode
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+        
+        
+
+        <!-- Right Column: Visual OBS Structure Tree -->
+        <section class="lg:col-span-3 flex flex-col bg-white border border-slate-200 rounded-2xl p-6 shadow-sm overflow-x-auto">
+            
+            <div class="min-w-[850px] flex flex-col items-center py-6 relative">
+            
+                <!-- LEVEL 0: Root Organization Header (Matches Image Layout) -->
+                <div class="relative pb-12 z-10">
+                    <div class="bg-slate-900 text-white px-10 py-5 rounded-2xl shadow-xl border-4 border-double border-slate-700 text-center w-72">
+                        <div class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">PHiram App Project</div>
+                        <div class="font-extrabold text-base mt-1 tracking-wide">ORGANIZATION (OBS)</div>
+                    </div>
+                    <!-- Down line from Root -->
+                    <div class="tree-line-vertical h-12 bottom-0"></div>
+                </div>
+
+                <!-- LEVEL 1: Three Core Branches (Project Manager, Dev Team, QA) -->
+                <div class="relative w-full flex justify-between px-2 pb-12">
+                    <!-- Horizontal bar connecting Level 1 -->
+                    <div class="tree-line-horizontal" style="left: 16.6%; right: 16.6%;"></div>
+                    
+                    <!-- 1.1 Project Manager Node -->
+                    <div class="w-1/3 flex flex-col items-center relative">
+                        <!-- Connecting lines -->
+                        <div class="tree-line-vertical h-6 -top-0"></div>
+                        <div class="tree-line-vertical h-12 bottom-0"></div>
+                        
+                        <div class="bg-white border border-blue-500 text-slate-800 px-5 py-4 rounded-2xl shadow-sm text-center w-52 relative z-10">
+                            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white text-[9px] px-4 py-0.5 rounded-full font-bold uppercase tracking-wider">Manager</div>
+                            <div class="font-bold text-sm mt-1 text-slate-900">Project Manager</div>
+                            <div class="text-xs font-semibold text-blue-600 mt-1">Sean Andrew Tablante</div>
+                        </div>
+                    </div>
+
+                    <!-- 1.2 Creative & Dev Team Node -->
+                    <div class="w-1/3 flex flex-col items-center relative">
+                        <!-- Connecting lines -->
+                        <div class="tree-line-vertical h-6 -top-0"></div>
+                        <div class="tree-line-vertical h-12 bottom-0"></div>
+                        
+                        <div class="bg-white border border-pink-500 text-slate-800 px-5 py-4 rounded-2xl shadow-sm text-center w-52 relative z-10">
+                            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-pink-500 text-white text-[9px] px-4 py-0.5 rounded-full font-bold uppercase tracking-wider">Dev Team</div>
+                            <div class="font-bold text-sm mt-1 text-slate-900">Creative & Devs</div>
+                            <div class="text-xs font-medium text-slate-500 mt-1">3 Sub-Specialists</div>
+                        </div>
+                    </div>
+
+                    <!-- 1.3 Quality Assurance Node -->
+                    <div class="w-1/3 flex flex-col items-center relative">
+                        <!-- Connecting lines -->
+                        <div class="tree-line-vertical h-6 -top-0"></div>
+                        <div class="tree-line-vertical h-12 bottom-0"></div>
+                        
+                        <div class="bg-white border border-emerald-500 text-slate-800 px-5 py-4 rounded-2xl shadow-sm text-center w-52 relative z-10">
+                            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-white text-[9px] px-4 py-0.5 rounded-full font-bold uppercase tracking-wider">Quality Assurance</div>
+                            <div class="font-bold text-sm mt-1 text-slate-900">QA Specialist</div>
+                            <div class="text-xs font-semibold text-emerald-600 mt-1">Hannali Olayvar</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 2: Sub-Groups & Specific Responsibilities -->
+                <div class="w-full flex justify-between px-2">
+                    
+                    <!-- PM Sub-branches (Project Controls, Documentation) -->
+                    <div class="w-1/3 flex flex-col items-center gap-3 relative border-r border-dashed border-slate-200">
+                        <!-- Connecting vertical line for PM children -->
+                        <div class="tree-line-vertical h-full -top-12" style="height: 140px;"></div>
+                        
+                        <!-- PM Sub-item 1 -->
+                        <div class="bg-slate-50 border border-slate-200 text-slate-700 px-4 py-3 rounded-xl text-xs font-bold w-44 text-center relative z-10 shadow-sm">
+                            Project Reports
+                        </div>
+                        <!-- PM Sub-item 2 -->
+                        <div class="bg-slate-50 border border-slate-200 text-slate-700 px-4 py-3 rounded-xl text-xs font-bold w-44 text-center relative z-10 shadow-sm">
+                            Documentation
+                        </div>
+                    </div>
+
+                    <!-- Development Sub-branches (UI/UX, Frontend, Backend) -->
+                    <div class="w-1/3 flex flex-col items-center gap-3 relative">
+                        <!-- Connecting vertical line for Dev children -->
+                        <div class="tree-line-vertical h-full -top-12" style="height: 250px;"></div>
+                        
+                        <!-- UI/UX Node -->
+                        <div class="bg-white border border-pink-200 text-slate-700 px-4 py-3 rounded-xl text-xs w-48 text-center relative z-10 shadow-sm">
+                            <div class="text-[8px] uppercase tracking-wider text-pink-500 font-extrabold mb-0.5">UI/UX Design</div>
+                            <div class="text-[11px] font-extrabold text-slate-800">Figma & Wireframing</div>
+                            <div class="text-[10px] text-pink-600 font-bold mt-1">Sean Andrew Tablante</div>
+                        </div>
+                        
+                        <!-- Frontend Node -->
+                        <div class="bg-white border border-pink-200 text-slate-700 px-4 py-3 rounded-xl text-xs w-48 text-center relative z-10 shadow-sm">
+                            <div class="text-[8px] uppercase tracking-wider text-pink-500 font-extrabold mb-0.5">Frontend Dev</div>
+                            <div class="text-[11px] font-extrabold text-slate-800">Front End Development</div>
+                            <div class="text-[10px] text-pink-600 font-bold mt-1">Hannali Olayvar</div>
+                        </div>
+
+                        <!-- Backend & Database Node (Distinct indigo highlight matching image selection) -->
+                        <div class="bg-white border-2 border-indigo-400 text-slate-700 px-4 py-3 rounded-xl text-xs w-52 text-center relative z-10 shadow-md">
+                            <div class="text-[8px] uppercase tracking-wider text-indigo-500 font-extrabold mb-0.5">Backend & Database</div>
+                            <div class="text-[11px] font-extrabold text-slate-800"> Back End & DB</div>
+                            <div class="text-[10px] text-slate-600 font-medium mt-1">                               <span class="text-pink-600 font-bold">Dwight Oscar Reyes</span> & Sean Andrew Tablante
+                            </div>
+                        </div>
+
+                       
+                    </div>
+
+                    <!-- QA Sub-branches (Usability, Integration, Bug Tracking) -->
+                    <div class="w-1/3 flex flex-col items-center gap-3 relative border-l border-dashed border-slate-200">
+                        <!-- Connecting vertical line for QA children -->
+                        <div class="tree-line-vertical h-full -top-12" style="height: 140px;"></div>
+                        
+                        <!-- QA Sub-item 1 -->
+                        <div class="bg-slate-50 border border-slate-200 text-slate-700 px-4 py-3 rounded-xl text-xs font-bold w-44 text-center relative z-10 shadow-sm">
+                            Usability & Integration
+                        </div>
+                        <!-- QA Sub-item 2 -->
+                        <div class="bg-slate-50 border border-slate-200 text-slate-700 px-4 py-3 rounded-xl text-xs font-bold w-44 text-center relative z-10 shadow-sm">
+                            Bug Tracking
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <!-- Context Helper Note -->
+            <div class="mt-auto pt-6 border-t border-slate-100 text-center text-xs text-slate-400">
+                <span>PHiram Project Management Organizational Breakdown Structure Structure (OBS)</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bottom Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+        <p>© 2026 PHiram Renting App. Prepared for IT124P Project Management.</p>
+    </footer>
+
+    <!-- Initialize Icons -->
+    <script>
+        window.onload = function() {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
