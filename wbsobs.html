@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHiram WBS-OBS Integration Structure</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .line-v {
+            width: 2px;
+            background: #cbd5e1;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .line-h {
+            height: 2px;
+            background: #cbd5e1;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-100 min-h-screen text-slate-800">
+
+    <!-- HEADER -->
+    <header class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-6 py-5">
+
+            <div class="flex items-center gap-2 mb-2">
+                <span class="bg-violet-100 text-violet-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                    IT124P Project Management
+                </span>
+
+                <span class="text-slate-400 text-xs">|</span>
+
+                <span class="text-xs font-semibold text-slate-500">
+                    WBS and OBS Integration Structure
+                </span>
+            </div>
+
+            <h1 class="text-3xl font-extrabold flex items-center gap-3">
+                <i data-lucide="network" class="w-8 h-8 text-violet-600"></i>
+                PHiram WBS + OBS Integration
+            </h1>
+
+            <p class="text-sm text-slate-500 mt-1">
+                Integrated visualization of project phases (WBS) and organizational assignment (OBS).
+            </p>
+
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-[1700px] mx-auto p-6">
+
+        <section class="bg-white border border-slate-200 rounded-3xl shadow-sm p-8 overflow-x-auto">
+
+            <div class="min-w-[1600px] flex flex-col items-center relative py-8">
+
+                <!-- ROOT -->
+                <div class="relative pb-16 z-10">
+                    <div class="bg-slate-900 text-white rounded-3xl px-12 py-6 w-[360px] text-center border-4 border-double border-slate-700 shadow-2xl">
+                        <div class="text-[11px] uppercase tracking-[0.3em] text-violet-400 font-bold">
+                            PHIRAM PROJECT
+                        </div>
+
+                        <div class="text-xl font-extrabold mt-2">
+                            WBS + OBS Integration Structure
+                        </div>
+                    </div>
+
+                    <div class="line-v h-16 bottom-0"></div>
+                </div>
+
+                <!-- MAIN PHASES -->
+                <div class="relative w-full flex justify-between px-4 pb-16">
+
+                    <div class="line-h" style="left: 10%; right: 10%;"></div>
+
+                    <!-- PHASE 1 -->
+                    <div class="w-1/5 flex flex-col items-center relative">
+                        <div class="line-v h-6 top-0"></div>
+
+                        <div class="mt-6 bg-blue-50 border border-blue-400 rounded-2xl p-4 w-56 shadow-sm text-center">
+                            <div class="text-[10px] uppercase tracking-widest text-blue-500 font-extrabold">
+                                Phase 1
+                            </div>
+
+                            <div class="font-bold text-sm mt-1">
+                                Project Planning
+                            </div>
+
+                            <div class="text-[11px] text-blue-700 mt-2 font-semibold">
+                                Managed by Project Manager
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHASE 2 -->
+                    <div class="w-1/5 flex flex-col items-center relative">
+                        <div class="line-v h-6 top-0"></div>
+
+                        <div class="mt-6 bg-indigo-50 border border-indigo-400 rounded-2xl p-4 w-56 shadow-sm text-center">
+                            <div class="text-[10px] uppercase tracking-widest text-indigo-500 font-extrabold">
+                                Phase 2
+                            </div>
+
+                            <div class="font-bold text-sm mt-1">
+                                Development Planning
+                            </div>
+
+                            <div class="text-[11px] text-indigo-700 mt-2 font-semibold">
+                                PM + UI/UX Team
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHASE 3 -->
+                    <div class="w-1/5 flex flex-col items-center relative">
+                        <div class="line-v h-6 top-0"></div>
+
+                        <div class="mt-6 bg-pink-50 border border-pink-400 rounded-2xl p-4 w-56 shadow-sm text-center">
+                            <div class="text-[10px] uppercase tracking-widest text-pink-500 font-extrabold">
+                                Phase 3
+                            </div>
+
+                            <div class="font-bold text-sm mt-1">
+                                Modular Construction
+                            </div>
+
+                            <div class="text-[11px] text-pink-700 mt-2 font-semibold">
+                                Frontend + Backend Teams
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHASE 4 -->
+                    <div class="w-1/5 flex flex-col items-center relative">
+                        <div class="line-v h-6 top-0"></div>
+
+                        <div class="mt-6 bg-emerald-50 border border-emerald-400 rounded-2xl p-4 w-56 shadow-sm text-center">
+                            <div class="text-[10px] uppercase tracking-widest text-emerald-500 font-extrabold">
+                                Phase 4
+                            </div>
+
+                            <div class="font-bold text-sm mt-1">
+                                Deployment & Maintenance
+                            </div>
+
+                            <div class="text-[11px] text-emerald-700 mt-2 font-semibold">
+                                Backend + QA Teams
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHASE 5 -->
+                    <div class="w-1/5 flex flex-col items-center relative">
+                        <div class="line-v h-6 top-0"></div>
+
+                        <div class="mt-6 bg-rose-50 border border-rose-400 rounded-2xl p-4 w-56 shadow-sm text-center">
+                            <div class="text-[10px] uppercase tracking-widest text-rose-500 font-extrabold">
+                                Phase 5
+                            </div>
+
+                            <div class="font-bold text-sm mt-1">
+                                Retrospective & Closing
+                            </div>
+
+                            <div class="text-[11px] text-rose-700 mt-2 font-semibold">
+                                PM + QA Specialist
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- INTEGRATION LAYER -->
+                <div class="w-full grid grid-cols-5 gap-5">
+
+                    <!-- COLUMN 1 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i>
+                            <h3 class="font-bold text-sm text-slate-900">
+                                Phase 1 Integration
+                            </h3>
+                        </div>
+
+                        <div class="space-y-3">
+
+                            <div class="bg-white border border-blue-200 rounded-xl p-3">
+                                <div class="text-[10px] font-extrabold text-blue-500 uppercase">
+                                    WBS Task
+                                </div>
+
+                                <div class="font-semibold text-xs mt-1">
+                                    Requirement Analysis
+                                </div>
+
+                                <div class="mt-2 text-[11px] text-slate-500">
+                                    OBS Unit:
+                                    <span class="font-bold text-blue-700">
+                                        Project Manager
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-blue-200 rounded-xl p-3">
+                                <div class="text-[10px] font-extrabold text-blue-500 uppercase">
+                                    WBS Task
+                                </div>
+
+                                <div class="font-semibold text-xs mt-1">
+                                    System Specification
+                                </div>
+
+                                <div class="mt-2 text-[11px] text-slate-500">
+                                    OBS Unit:
+                                    <span class="font-bold text-blue-700">
+                                        Backend Team
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- COLUMN 2 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="pen-tool" class="w-4 h-4 text-indigo-600"></i>
+                            <h3 class="font-bold text-sm text-slate-900">
+                                Phase 2 Integration
+                            </h3>
+                        </div>
+
+                        <div class="space-y-3">
+
+                            <div class="bg-white border border-indigo-200 rounded-xl p-3">
+                                <div class="text-[10px] font-extrabold text-indigo-500 uppercase">
+                                    WBS Task
+                                </div>
+
+                                <div class="font-semibold text-xs mt-1">
+                                    Sketches & Mockups
+                                </div>
+
+                                <div class="mt-2 text-[11px] text-slate-500">
+                                    OBS Unit:
+                                    <span class="font-bold text-indigo-700">
+                                        UI/UX Designer
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-indigo-200 rounded-xl p-3">
+                                <div class="text-[10px] font-extrabold text-indigo-500 uppercase">
+                                    WBS Task
+                                </div>
+
+                                <div class="font-semibold text-xs mt-1">
+                                    Task Delegation
+                                </div>
+
+                                <div class="mt-2 text-[11px] text-slate-500">
+                                    OBS Unit:
+                                    <span class="font-bold text-indigo-700">
+                                        Project Manager
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- COLUMN 3 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="code-2" class="w-4 h-4 text-pink-600"></i>
+                            <h3 class="font-bold text-sm text-slate-900">
+                                Phase 3 Integration
+                            </h3>
+                        </div>
+
+                        <div class="space-y-3">
+
+                            <div class="bg-white border border-pink-200 rounded-xl p-3">
+                                <div class="text-[10px] font-extrabold text-pink-500 uppercase">
+                                    WBS Task
+                                </div>
+
+                                <div class="font-semibold text-xs mt-1">
+                                    Frontend Development
+                                </div>
+
+                                <div class="mt-2 text-[11px] text-slate-500">
+                                    OBS Unit:
+                                    <span class="font-bold text-pink-700">
+                                        Frontend Developer
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-pink-200 rounded-xl p-3">
+                                <div class="text-[10px] font-extrabold text-pink-500 uppercase">
+                                    WBS Task
+                                </div>
+
+                                <div class="font-semibold text-xs mt-1">
+                                    Backend & Database Dev
+                                </div>
+
+                                <div class="mt-2 text-[11px] text-slate-500">
+                                    OBS Unit:
+                                    <span class="font-bold text-pink-700">
+                                        Backend Team
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- COLUMN 4 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="server-cog" class="w-4 h-4 text-emerald-600"></i>
+                            <h3 class="font-bold text-sm text-slate-900">
+                                Phase 4 Integration
+                            </h3>
+                        </div>
+
+                        <div class="space-y-3">
+
+                            <div class="bg-white border border-emerald-200 rounded-xl p-3">
+                                <div class="text-[10px] font-extrabold text-emerald-500 uppercase">
+                                    WBS Task
+                                </div>
+
+                                <div class="font-semibold text-xs mt-1">
+                                    Deployment
+                                </div>
+
+                                <div class="mt-2 text-[11px] text-slate-500">
+                                    OBS Unit:
+                                    <span class="font-bold text-emerald-700">
+                                        Backend Team
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-emerald-200 rounded-xl p-3">
+                                <div class="text-[10px] font-extrabold text-emerald-500 uppercase">
+                                    WBS Task
+                                </div>
+
+                                <div class="font-semibold text-xs mt-1">
+                                    Bug Monitoring
+                                </div>
+
+                                <div class="mt-2 text-[11px] text-slate-500">
+                                    OBS Unit:
+                                    <span class="font-bold text-emerald-700">
+                                        QA Specialist
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- COLUMN 5 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="flag" class="w-4 h-4 text-rose-600"></i>
+                            <h3 class="font-bold text-sm text-slate-900">
+                                Phase 5 Integration
+                            </h3>
+                        </div>
+
+                        <div class="space-y-3">
+
+                            <div class="bg-white border border-rose-200 rounded-xl p-3">
+                                <div class="text-[10px] font-extrabold text-rose-500 uppercase">
+                                    WBS Task
+                                </div>
+
+                                <div class="font-semibold text-xs mt-1">
+                                    Post-Project Evaluation
+                                </div>
+
+                                <div class="mt-2 text-[11px] text-slate-500">
+                                    OBS Unit:
+                                    <span class="font-bold text-rose-700">
+                                        QA Specialist
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-rose-200 rounded-xl p-3">
+                                <div class="text-[10px] font-extrabold text-rose-500 uppercase">
+                                    WBS Task
+                                </div>
+
+                                <div class="font-semibold text-xs mt-1">
+                                    Project Sign-Off
+                                </div>
+
+                                <div class="mt-2 text-[11px] text-slate-500">
+                                    OBS Unit:
+                                    <span class="font-bold text-rose-700">
+                                        Project Manager
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500 mt-8">
+        © 2026 PHiram Project — Integrated WBS & OBS Structure
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
